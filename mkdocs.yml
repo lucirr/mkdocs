@@ -1,3 +1,18 @@
-site_name: My Docs
+site_name: PaaSXpert Usage 
 theme:
   name: material
+  palette:
+    primary: pink  
+  icon:
+    logo: material/cloud
+  favicon: images/favicon.ico
+  custom_dir: overrides
+  language: kr
+nav:
+  - 'index.md'
+  - '사용자 가이드':
+    - 'user-guide/developer.md'
+    - 'user-guide/deployer.md'
+    - 'user-guide/manager.md'
+    - 'user-guide/admin.md'
+  - '운영자 가이드': 'admin-guide.md'
