@@ -4,7 +4,7 @@ theme:
   palette:
     primary: pink  
   icon:
-    logo: material/cloud
+    logo: material/clouds
   favicon: images/favicon.ico
   custom_dir: overrides
   language: kr
@@ -16,3 +16,6 @@ nav:
     - 'user-guide/manager.md'
     - 'user-guide/admin.md'
   - '운영자 가이드': 'admin-guide.md'
+copyright: Copyright &copy; 2016 CROSSENT
+extra:
+  generator: false  
