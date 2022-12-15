@@ -2,9 +2,9 @@ site_name: PaaSXpert Usage
 theme:
   name: material
   palette:
-    primary: pink  
+    primary: blue  
   icon:
-    logo: material/clouds
+    logo: material/cloud
   favicon: images/favicon.ico
   custom_dir: overrides
   language: kr
