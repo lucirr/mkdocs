@@ -219,15 +219,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    사용자 권한
+  <a href="#role" class="md-nav__link">
+    Role
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#main-process" class="md-nav__link">
+    Main Process
   </a>
   
 </li>
@@ -372,15 +372,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    사용자 권한
+  <a href="#role" class="md-nav__link">
+    Role
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#main-process" class="md-nav__link">
+    Main Process
   </a>
   
 </li>
@@ -402,20 +402,28 @@
 
 <h1 id="overview">Overview</h1>
 <p><a href="https://poratl.openstack.doxpert.co.kr">PaaSXpert 4.1</a></p>
-<h2 id="_1">사용자 권한</h2>
+<h2 id="role">Role</h2>
 <ul>
 <li><code>개발자 (USER)</code> - 파이프라인과 배포된 어플리케이션을 조회.</li>
 <li><code>배포담당자 (DEPLOYER)</code> - 파이프라인을 실행하고 승인.</li>
-<li><code>책임자 (MANAGER)</code> - Git 생성 및 사용자를 등록하며 파이프라인을 생성하고 실행.</li>
+<li><code>책임자 (MANAGER)</code> - Git 생성 및 Git에 사용자를 할당하며 파이프라인을 생성하고 실행.</li>
 <li><code>관리자 (ADMIN)</code> - 사용자를 생성하고 권한을 부여.</li>
 <li><code>시스템관리자 (MASTER)</code> - 최초 설치시 지정한 시스템관리자, ADMIN 관리자를 생성.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>    mkdocs.yml    # The configuration file.
+<h2 id="main-process">Main Process</h2>
+<ol>
+<li><strong>시스템관리자</strong>가 포털에 로그인 한 후 사용자 관리에서 신규 관리자를 등록하고, 그 관리자에게 클러스터 권한을 할당한다.</li>
+<li><strong>관리자</strong>는 포털에 로그인 한 후 네임스페이스를 등록하고, 사용자 관리에서 책임자, 배포담당자, 개발자를 등록한다</li>
+<li><strong>책임자</strong>는 포털에 로그인 한 후 Git을 생성하고 Git에 사용자를 할당한다. 파이프라인을 생성하고 파이프라인을 실행한다.</li>
+<li><strong>배포담당자</strong>는 포털에 로그인 한 후 운영배포 승인을 처리한다.</li>
+<li><strong>개발자</strong>는 포털에 로그인 한 후 배포된 파드 상태를 확인하고, 파이프라인 처리 상태를 확인한다.</li>
+</ol>
+<!-- ```
+    mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-</code></pre>
+```         -->
 
 
 
